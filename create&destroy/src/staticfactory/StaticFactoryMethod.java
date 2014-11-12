@@ -1,3 +1,4 @@
+package staticfactory;
 
 public class StaticFactoryMethod {
 	public static Boolean valueOf(boolean b) {

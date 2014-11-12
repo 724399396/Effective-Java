@@ -1,3 +1,4 @@
+package staticfactory;
 //Service provider framework sketch
 
 // Service interface

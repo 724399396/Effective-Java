@@ -1,10 +1,11 @@
+package staticfactory;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 
 // Non instantiable class for service registration and access 
 public class Services {
-	private Services() {}	// Prevents instantiation	·ÀÖ¹ÊµÀý»¯
+	private Services() {}	// Prevents instantiation	ï¿½ï¿½Ö¹Êµï¿½ï¿½
 	
 	// Maps service names to services
 	private static final Map<String,Provider> providers = 
