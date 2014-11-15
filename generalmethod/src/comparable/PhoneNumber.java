@@ -7,7 +7,8 @@ import java.util.Map;
  * @author li-wei
  *
  */
-public class PhoneNumber {
+public class PhoneNumber 
+	implements Comparable<PhoneNumber>{
 	private final short areaCode;
 	private final short prefix;
 	private final short lineNumber;
@@ -44,6 +45,26 @@ public class PhoneNumber {
 		result = 31 * result + prefix;
 		result = 31 * result + lineNumber;
 		return result;
+	}
+	
+	public int compareTo(PhoneNumber pn) {
+		// Compare area codes
+		if (areaCode < pn.areaCode)
+			return -1;
+		if (areaCode > pn.areaCode)
+			return  1;
+		// Area codes are equals, compare prefixes
+		if (prefix < pn.prefix)
+			return -1;
+		if (prefix > pn.prefix)
+			return  1;
+		// Area codes and prefixes are equal, compare line numbers
+		if (lineNumber < pn.lineNumber)
+			return -1;
+		if (lineNumber > pn.lineNumber)
+			return  1;
+		
+		return 0;	// All fields are equal;
 	}
 	
 	/**
