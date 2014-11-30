@@ -6,6 +6,10 @@ import java.util.HashSet;
 
 // Broken - Inappropriate use of inheritance! 不恰当地使用继承
 public class BrokenInstrumentedHashSet<E> extends HashSet<E> {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	// The number of attemped element insertions
 	private int addCount = 0;
 	

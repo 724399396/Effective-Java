@@ -20,6 +20,7 @@ public abstract class AbstractMapEntry<K,V>
 			return true;
 		if (!(o instanceof Map.Entry))
 			return false;
+		@SuppressWarnings("rawtypes")
 		Map.Entry<?, ?> arg = (Map.Entry)o;
 		return equals(getKey(), arg.getKey()) &&
 					   equals(getValue(), arg.getValue());

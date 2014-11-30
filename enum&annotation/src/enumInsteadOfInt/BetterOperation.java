@@ -34,6 +34,5 @@ public enum BetterOperation {
 		for (BetterOperation op : BetterOperation.values())
 			System.out.printf("%f %s %f = %f%n",
 					x, op, y, op.apply(x, y));
-		System.out.println(fromString("+").getClass());
 	}
 }
